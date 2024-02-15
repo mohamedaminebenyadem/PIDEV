@@ -1,19 +1,426 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
-        {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }}
-        {% endblock %}
+<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <title>{% block title %}UBANK {% endblock %}</title>
+    <meta name="description" content="Responsive HTML5 Template">
+    <meta name="author" content="webthemez">
 
-        {% block javascripts %}
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    {% block css %}
+    <!-- Favicon -->
+        <style>
+            body {
+                background-image: url('/public/images/banner.jpg');
+            }
+        </style>
+    <link rel="shortcut icon" href="{{asset('images/favicon.ico')}}">
+
+    <link href="{{asset('bootstrap/css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{asset('fonts/font-awesome/css/font-awesome.css')}}" rel="stylesheet">
+    <link href="{{asset('css/animations.css')}}" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{asset('css/custom.css')}}" rel="stylesheet">
+    {% endblock %}
+
+</head>
+
+<body class="no-trans">
+
+
+<!-- scrollToTop -->
+<div class="scrollToTop"><i class="icon-up-open-big"></i></div>
+
+<!-- header start -->
+<header class="header fixed clearfix navbar navbar-fixed-top">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+
+                <!-- header-left start -->
+                <div class="header-left">
+
+                    <!-- logo -->
+                    <div class="logo smooth-scroll">
+                        <a href="#banner"><img id="logo" src="./public/images/logo.png" alt="Worthy" width="100" height="50"></a>
+                    </div>
+
+                    <!-- name-and-slogan -->
+                    <div class="logo-section smooth-scroll">
+                        <div class="brand"><a href="#banner">UBANK</a></div>
+                    </div>
+
+                </div>
+                <!-- header-left end -->
+
+            </div>
+            <div class="col-md-8">
+
+                <!-- header-right start -->
+                <div class="header-right">
+
+                    <!-- main-navigation start -->
+                    <div class="main-navigation animated">
+
+                        <!-- navbar start -->
+                        <nav class="navbar navbar-default" role="navigation">
+                            <div class="container-fluid">
+
+                                <!-- Toggle get grouped for better mobile display -->
+                                <div class="navbar-header">
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse-1">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <!-- Collect the nav links, forms, and other content for toggling -->
+                                <div class="collapse navbar-collapse scrollspy smooth-scroll" id="navbar-collapse-1">
+                                    <ul class="nav navbar-nav navbar-right">
+                                        <li class="active"><a href="#banner">Home</a></li>
+                                        <li><a href="#services">Services</a></li>
+                                        <li><a href="{{path('app_reclamation_index')}}">Reclamation</a></li>
+
+                                        <li><a href="#Login">Login</a></li>
+                                        <li><a href="#contact">Contact</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                        </nav>
+                        <!-- navbar end -->
+
+                    </div>
+                    <!-- main-navigation end -->
+
+                </div>
+                <!-- header-right end -->
+
+            </div>
+        </div>
+    </div>
+</header>
+<!-- header end -->
+
+<!-- banner start -->
+<div id="banner" class="banner">
+    <div class="banner-image"></div>
+    <div class="banner-caption">
+        <div class="container">
+            <div class="row">
+                <div class="caption-data" style="margin-top: 0px; opacity: 1;" data-animation-effect="fadeIn">
+                    <h1>SAFE PLACE TO CASH IN</h1>
+                    <div class="padding-top60 contact-form">
+                        <button class="btn cta-button">CLICK HERE</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- banner end -->
+<section class="hero-caption secPadding">
+
+    <div class="container">
+
+        <div class="row " style="margin-top: 0px;">
+            <div class="col-sm-12">
+                <h2>welcome to <strong>UBANK</strong> - <span>A SAFE</span> PLACE TO CASH IN</h2>
+            </div>
+
+        </div>
+
+    </div>
+   {%block body%}
+   {%  endblock %}
+
+
+</section>
+<!-- section start -->
+<section class="section transprant-bg pclear secPadding">
+    <div class="container no-view" data-animation-effect="fadeIn">
+        <h1 id="services" class="title text-center">Services</h1>
+        <div class="space"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="media block-list">
+                    <div class="media-left">
+                        <i class="fa fa-trophy"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">User Research</h3>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur quo.</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media block-list">
+                    <div class="media-left">
+                        <i class="fa fa-gear"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Data Collection</h3>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam ducimus.</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media block-list">
+                    <div class="media-left">
+                        <i class="fa fa-laptop"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Designing</h3>
+                        <blockquote>
+                            <p>Dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur placeat.</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="media block-list">
+                    <div class="media-left">
+                        <i class="fa fa-clock-o"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Development</h3>
+                        <blockquote>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur.</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media block-list">
+                    <div class="media-left">
+                        <i class="fa fa-heart"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Quality</h3>
+                        <blockquote>
+                            <p>Forem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur.</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="media block-list">
+                    <div class="media-left">
+                        <i class="fa fa-magic"></i>
+                    </div>
+                    <div class="media-body">
+                        <h3 class="media-heading">Release</h3>
+                        <blockquote>
+                            <p>Norem ipsum dolor sit amet, consectetur adipisicing elit. Iure aperiam consequatur.</p>
+
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+
+<!-- section start -->
+
+
+
+
+
+
+
+
+
+</section>
+<!-- section end -->
+<!-- section start -->
+<section class="default-bg secPadding">
+
+    <div class="container">
+        <div class="row">
+            <div class='col-md-offset-2 col-md-8 text-center'>
+                <h2>Clients Testimonials</h2>
+            </div>
+        </div>
+        <div class='row'>
+            <div class='col-md-offset-2 col-md-8'>
+                <div class="carousel slide" data-ride="carousel" id="quote-carousel">
+                    <!-- Bottom Carousel Indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#quote-carousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#quote-carousel" data-slide-to="1"></li>
+                        <li data-target="#quote-carousel" data-slide-to="2"></li>
+                    </ol>
+
+                    <!-- Carousel Slides / Quotes -->
+                    <div class="carousel-inner">
+
+                        <!-- Quote 1 -->
+                        <div class="item active">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg" style="width: 100px;height:100px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p>Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit!</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 2 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/mijustin/128.jpg" style="width: 100px;height:100px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam auctor nec lacus ut tempor. Mauris.</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                        <!-- Quote 3 -->
+                        <div class="item">
+                            <blockquote>
+                                <div class="row">
+                                    <div class="col-sm-3 text-center">
+                                        <img class="img-circle" src="https://s3.amazonaws.com/uifaces/faces/twitter/keizgoesboom/128.jpg" style="width: 100px;height:100px;">
+                                    </div>
+                                    <div class="col-sm-9">
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum elit in arcu blandit, eget pretium nisl accumsan. Sed ultricies commodo tortor, eu pretium mauris.</p>
+                                        <small>Someone famous</small>
+                                    </div>
+                                </div>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- section end -->
+
+
+
+<!-- footer start -->
+<footer id="footer">
+
+    <!-- .footer start -->
+    <div class="footer section">
+        <div class="container">
+            <h1 class="title text-center" id="contact">Contact Us</h1>
+            <div class="space"></div>
+            <div class="row">
+
+                <div class="col-sm-6">
+                    <div class="footer-content">
+                        <form role="form" id="footer-form">
+                            <div class="form-group has-feedback">
+                                <label class="sr-only" for="name2">Name</label>
+                                <input type="text" class="form-control" id="name2" placeholder="Name" name="name2" required>
+                                <i class="fa fa-user form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="sr-only" for="email2">Email address</label>
+                                <input type="email" class="form-control" id="email2" placeholder="Enter email" name="email2" required>
+                                <i class="fa fa-envelope form-control-feedback"></i>
+                            </div>
+                            <div class="form-group has-feedback">
+                                <label class="sr-only" for="message2">Message</label>
+                                <textarea class="form-control" rows="8" id="message2" placeholder="Message" name="message2" required></textarea>
+                                <i class="fa fa-pencil form-control-feedback"></i>
+                            </div>
+                            <input type="submit" value="Send" class="btn btn-default">
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="footer-content">
+
+
+                        <div class="widget-content">
+
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam magnam natus tempora cumque, aliquam deleniti voluptatibus voluptas. Maecenas ultrices finibus erat sit amet auctor. Curabitur et metus laoreet, fermentum quam sagittis, cursus augue. </p><br/>
+
+                            <p class="contacts"><i class="fa fa-map-marker"></i> 1508 Kembery Drive, Chicago, IL 60605 </p>
+
+                            <p class="contacts"><i class="fa fa-phone"></i> 202-314-1583</p>
+
+                            <p class="contacts"><i class="fa fa-envelope"></i> support@biss.com</p>
+
+
+
+                        </div>
+
+                        </aside>
+                        <ul class="social-links">
+                            <li class="facebook"><a target="_blank" href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li class="twitter"><a target="_blank" href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li class="googleplus"><a target="_blank" href="#"><i class="fa fa-google-plus"></i></a></li>
+                            <li class="skype"><a target="_blank" href="#"><i class="fa fa-skype"></i></a></li>
+                            <li class="linkedin"><a target="_blank" href="#"><i class="fa fa-linkedin"></i></a></li>
+                            <li class="youtube"><a target="_blank" href="#"><i class="fa fa-youtube"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .footer end -->
+
+    <!-- .subfooter start -->
+    <div class="subfooter">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-center">Copyright © 2015 Template by <a target="_blank" href="http://webthemez.com">webthemez.com</a>.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- .subfooter end -->
+
+</footer>
+<!-- footer end -->
+
+<!-- JavaScript -->
+{%  block js %}
+<script type="text/javascript" src="{{asset('plugins/jquery.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('plugins/modernizr.js')}}"></script>
+<script type="text/javascript" src="{{asset('plugins/isotope/isotope.pkgd.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('plugins/jquery.backstretch.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('plugins/jquery.appear.js')}}"></script>
+
+<!-- Custom Scripts -->
+<script type="text/javascript" src="{{ asset('js/custom.js') }}"></script>
+
+{%  endblock %}
+</body>
 </html>
